@@ -30,13 +30,33 @@
         <div id="app">
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
-                <dev class="container">
+                <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria
-                </dev>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expamded="false" aria-label~"Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="nabvaeSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
+                            
+                        </ul>
+                        
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            
+                        </ul>
+                    </div>
+                </div>
             </nav>
+            {{-- ここまでナビゲーションバー --}}
+            
+            <main class="py-4">
+                {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
+                @yield('content')
+            </main>
         </div>
     </body>
 </html>

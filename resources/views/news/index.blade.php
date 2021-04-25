@@ -45,7 +45,7 @@
                 </div>
                 <div class="image col-md-6 text-right mt-4">
                     @if ($post->image_path)
-                    <img scr="{{ asset('storage/image/' .$post->image_path) }}">
+                    <img scr="{{ secure_asset('storage/image/' .$post->image_path) }}">
                     @endif
                 </div>
             </div>
